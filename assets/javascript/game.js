@@ -15,25 +15,17 @@ $("#lossCount").text(losses);
 
 
 
-function assignNum() {
-    redCrys = Math.floor(Math.random() * 10);
-    blueCrys = Math.floor(Math.random() * 10);
-    greenCrys = Math.floor(Math.random() * 10);
-    whiteCrys = Math.floor(Math.random() * 10);
-    computerNumber = Math.floor(Math.random() * 100);
-}
 
 
 // Function to reset the game after a win or loss
 
 function resetGame() {
-    assignNum()
     redCrys = Math.floor(Math.random() * 10);
     blueCrys = Math.floor(Math.random() * 10);
     greenCrys = Math.floor(Math.random() * 10);
     whiteCrys = Math.floor(Math.random() * 10);
     computerNumber = Math.floor(Math.random() * 100);
-    $("#scoreCount").text(count);
+    $("#score").text(count);
     $("#computerpick").text(computerNumber)
 }
 
@@ -59,7 +51,7 @@ function loser() {
 
 $("#redCrystal").on ("click", function() {
     count = count + redCrys;
-    $("#scorecount").text(count);
+    $("#score").text(count);
 
     if(count === computerNumber){
         winner();
@@ -73,7 +65,7 @@ $("#redCrystal").on ("click", function() {
 
 $("#blueCrystal").on ("click", function() {
     count = count + blueCrys;
-    $("#scorecount").text(count);
+    $("#score").text(count);
 
     if(count === computerNumber){
         winner();
@@ -87,7 +79,7 @@ $("#blueCrystal").on ("click", function() {
 
 $("#greenCrystal").on ("click", function() {
     count = count + greenCrys;
-    $("#scorecount").text(count);
+    $("#score").text(count);
 
     if(count === computerNumber){
         winner();
@@ -101,7 +93,7 @@ $("#greenCrystal").on ("click", function() {
 
 $("#whiteCrystal").on ("click", function() {
     count = count + whiteCrys;
-    $("#scorecount").text(count);
+    $("#score").text(count);
 
     if(count === computerNumber){
         winner();
