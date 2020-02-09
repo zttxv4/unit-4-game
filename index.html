@@ -1,58 +1,43 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Homework 4</title>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Crystals Collector</title>
 
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  
-  </style>
-
-</head>
-<body>
-
-    <h1>Crystals Collector!</h1>
-
-    <div id="instruction">
-        <ul>
-            <li>You will be given a random number at the start of the game</li>
-            <li>There are four crystals below. By clicking on a  crystal you will add a specific amount of points to your total score</li>
-            <li>You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.</li>
-            <li>The value of each crystal is hidden from you until you click on it.</li>
-            <li>Each time the game starts, the game will change the values of each crystal.</li>
-        </ul>
-    </div>
-
-    <br>
-
-    <div id="randomNumber">
-        <p id="numGuess">Number to Guess:<br><br> </p>
-        <span id="computerpick"></span>
-        </div>
-
-    <div id="count">
-        <h3 id="winCount">Wins: </h3>
-        <h3 id="lossCount">Losses: </h3>
-    </div>
-
-    <br>
-
-    <div id="crystalsImg">
-        <img id="redCrystal" src="http://images.clipartpanda.com/crystal-clipart-13679843181956288956free-crystal-icons-amethyst-md.png">
-        <img id="greenCrystal" src="http://images.clipartpanda.com/crystal-clipart-1283155d65897190befe74288a526692225d7b.png">
-        <img id="blueCrystal" src="http://images.clipartpanda.com/crystal-clipart-canstock20181085.jpg">
-        <img id="whiteCrystal" src="http://images.clipartpanda.com/crystal-clipart-white-crystal-md.png">
-
-    </div>
-
-    <br>
-
-    <div id="score">
-        <h1 id="scorecount">0</h1>
-       
-    </div>
-    
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <!-- jQuery Link -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Game Logic -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+  </head>
+  <body>
 
-</body>
+    <h1 id="title">CrystalsCollector!</h1>
+
+    <div id="rules-area">
+      <h4>You will be given a random number at the start of the game.</h4>
+      <h4>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</h4>
+      <h4>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</h4>
+      <h4>The value of each crystal is hidden from you until you click on it.</h4>
+      <h4>Each time when the game starts, the game will change the values of each crystal</h4>
+    </div>
+
+    <div id="screen">
+      <!-- Random Number Display -->
+      <div id="random-area"></div>
+      <!-- Wins/Losses Display -->
+      <div id="win-area"></div>
+    </div>
+
+    <div>
+      <!-- Crystals -->
+      <div id="crystal-area"></div>
+      <div id="score-title">Your total score is:</div>
+      <!-- Score Display -->
+      <div id="score-area"></div>
+    </div>
+
+  </body>
 </html>
